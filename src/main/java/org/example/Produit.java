@@ -1,10 +1,6 @@
 package org.example;
 
 public class Produit {
-
-    /*java.Produit avec les attributs id, nom, marque, prix, description,
-    et nombre en stock.
-    */
     private int id;
     private String nom;
     private String marque;
@@ -58,5 +54,16 @@ public class Produit {
 
     public void setStockNbr(int stockNbr) {
         this.stockNbr = stockNbr;
+    }
+
+    @Override
+    public String toString() {
+        return "Produit{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", marque='" + marque + '\'' +
+                ", description='" + description + '\'' +
+                ", stockNbr=" + stockNbr +
+                '}';
     }
 }

@@ -25,8 +25,6 @@ public class MetierProduitImpl implements IMetier<Produit> {
 
     @Override
     public void delete(long t) {
-        produits = produits.stream()
-                .filter(produit -> produit.getId() != t)
-                .toList();
+       produits.removeIf(pr -> pr.getId() == t);
     }
 }
